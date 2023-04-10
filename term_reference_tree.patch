@@ -277,6 +277,7 @@ function _term_reference_tree_get_children($tid, $vid) {
   // module is enabled).
   $table = 'taxonomy_term_field_data';
   $alias = 't';
+  $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
   $query = \Drupal::database()
     ->select($table, $alias);
@@ -288,6 +289,7 @@ function _term_reference_tree_get_children($tid, $vid) {
     ->condition('p.parent_target_id', $tid)
     ->addTag('term_access')
     ->addTag('translatable')
+    ->condition('t.langcode', $langcode)
     ->addTag('term_reference_tree_get_children')
     ->orderBy('t.weight')
     ->orderBy('t.name');
