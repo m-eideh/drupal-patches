@@ -1,3 +1,12 @@
+From b948ca53ed97e77b7a0c0a15e11b33342cb6445b Mon Sep 17 00:00:00 2001
+From: m-eideh <55838846+m-eideh@users.noreply.github.com>
+Date: Mon, 10 Apr 2023 13:47:45 +0300
+Subject: [PATCH] Update term_reference_tree.patch
+
+---
+ term_reference_tree.patch | 2 ++
+ 1 file changed, 2 insertions(+)
+
 diff --git a/term_reference_tree.patch b/term_reference_tree.patch
 index 9e5e870..75d9f70 100644
 --- a/term_reference_tree.patch
@@ -18,3 +27,6 @@ index 9e5e870..75d9f70 100644
      ->addTag('term_reference_tree_get_children')
      ->orderBy('t.weight')
      ->orderBy('t.name');
+-- 
+2.17.1
+
