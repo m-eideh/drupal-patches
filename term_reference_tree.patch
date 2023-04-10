@@ -1,7 +1,7 @@
 diff --git a/term_reference_tree.patch b/term_reference_tree.patch
 index 9e5e870..75d9f70 100644
---- a/term_reference_tree.patch
-+++ b/term_reference_tree.patch
+--- a/term_reference_tree.module
++++ b/term_reference_tree.module
 @@ -277,6 +277,7 @@ function _term_reference_tree_get_children($tid, $vid) {
    // module is enabled).
    $table = 'taxonomy_term_field_data';
