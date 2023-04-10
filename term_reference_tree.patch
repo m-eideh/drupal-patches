@@ -1,0 +1,19 @@
+diff --git a/term_reference_tree.module b/term_reference_tree.module
+index 5ddd80b..09d5616 100644
+--- a/term_reference_tree.module
++++ b/term_reference_tree.module
+@@ -280,6 +280,7 @@ function _term_reference_tree_get_children($tid, $vid) {
+   $table = 'taxonomy_term_field_data';
+   $alias = 't';
++  $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+ 
+   $query = \Drupal::database()
+     ->select($table, $alias);
+@@ -292,6 +292,7 @@ function _term_reference_tree_get_children($tid, $vid) {
+   $query
+     ->condition('t.vid', $vid)
+     ->condition('p.parent_target_id', $tid)
++    ->condition('t.langcode', $langcode)
+     ->addTag('term_access')
+     ->addTag('translatable')
+     ->orderBy('t.weight')
