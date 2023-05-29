@@ -1,0 +1,13 @@
+diff --git a/src/Routing/RouteSubscriber.php b/src/Routing/RouteSubscriber.php
+index 6b3f94042..54403aea7 100755
+--- a/src/Routing/RouteSubscriber.php
++++ b/src/Routing/RouteSubscriber.php
+@@ -26,7 +26,7 @@ protected function alterRoutes(RouteCollection $collection) {
+   /**
+    * {@inheritdoc}
+    */
+-  public static function getSubscribedEvents() {
++  public static function getSubscribedEvents(): array {
+     // Run after PageManagerRoutesAlterSubscriber.
+     $events[RoutingEvents::ALTER][] = ['onAlterRoutes', -170];
+     return $events;
