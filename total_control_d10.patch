@@ -1,0 +1,12 @@
+index cb771793d..0c6efcc43
+--- a/docroot/modules/contrib/total_control/src/Routing/RouteSubscriber.php
++++ b/docroot/modules/contrib/total_control/src/Routing/RouteSubscriber.php
+@@ -23,7 +23,7 @@ protected function alterRoutes(RouteCollection $collection) {
+   /**
+    * {@inheritdoc}
+    */
+-  public static function getSubscribedEvents() {
++  public static function getSubscribedEvents(): array {
+     // Run after PageManagerRoutesAlterSubscriber.
+     $events[RoutingEvents::ALTER][] = ['onAlterRoutes', -170];
+     return $events;
