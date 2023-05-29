@@ -1,3 +1,4 @@
+diff --git a/docroot/modules/contrib/total_control/src/Routing/RouteSubscriber.php b/docroot/modules/contrib/total_control/src/Routing/RouteSubscriber.php
 index cb771793d..0c6efcc43
 --- a/docroot/modules/contrib/total_control/src/Routing/RouteSubscriber.php
 +++ b/docroot/modules/contrib/total_control/src/Routing/RouteSubscriber.php
